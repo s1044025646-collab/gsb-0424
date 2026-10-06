@@ -1,0 +1,12 @@
+{
+  "name": "demo-cycle",
+  "transactions": ["T1", "T2"],
+  "events": [
+    { "tx": "T1", "op": "R", "item": "X" },
+    { "tx": "T2", "op": "W", "item": "X" },
+    { "tx": "T2", "op": "R", "item": "Y" },
+    { "tx": "T1", "op": "W", "item": "Y" },
+    { "tx": "T1", "op": "C" },
+    { "tx": "T2", "op": "C" }
+  ]
+}

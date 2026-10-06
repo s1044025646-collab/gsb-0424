@@ -1,0 +1,19 @@
+{
+  "name": "conflict-serializability-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "离线事务调度冲突可串行化分析与依赖环见证核验后端（API + CLI）",
+  "type": "commonjs",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/analysis.test.js",
+    "start": "npm run build && node dist/src/server.js",
+    "cli": "npm run build && node dist/src/cli.js",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "typescript": "5.9"
+  }
+}
